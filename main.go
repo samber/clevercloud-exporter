@@ -21,7 +21,7 @@ func getEnv(key string, defaultVal string) string {
 }
 
 var (
-	listenAddr        = flag.String("web.listen-address", getEnv("WEB_LISTEN_ADDRESS", ":9217"), "Address to listen on for web interface and telemetry, defaults to 0.0.0.0:9217")
+	listenAddr        = flag.String("web.listen-address", getEnv("WEB_LISTEN_ADDRESS", "0.0.0.0:9217"), "Address to listen on for web interface and telemetry, defaults to 0.0.0.0:9217")
 	metricsPath       = flag.String("web.telemetry-path", getEnv("WEB_TELEMETRY_PATH", "/metrics"), "A path under which to expose metrics.")
 	metricsNamespace  = flag.String("namespace", getEnv("NAMESPACE", "clevercloud"), "Prometheus metrics namespace, as the prefix of metrics name")
 	clevercloudToken  = flag.String("cc.token", getEnv("CLEVER_TOKEN", "xxxx"), "Clever Cloud token")
